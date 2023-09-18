@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Assignments</title>
+  </head>
+  <body>
+    <table width="100%">
+      <tr valign="baseline">
+        <td style="width: 10%">
+          <!-- First Column: Navigation Links -->
+          <ul>
+            <li>
+              <a
+                href="/Users/dejahgadsden/2023/fall/webdev/kanbas-react-web-app/public/kanbas/profile/index.html"
+                >Account</a
+              >
+            </li>
+            <li><a href="#">Dashboard</a></li>
+            <li>
+              <a
+                href="/Users/dejahgadsden/2023/fall/webdev/kanbas-react-web-app/public/kanbas/course.html"
+                >Courses</a
+              >
+            </li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Studio</a></li>
+            <li><a href="#">Commons</a></li>
+            <li><a href="#">Helps</a></li>
+          </ul>
+        </td>
+        <td style="width: 20%">
+          <!-- Second Column: Course Navigation -->
+          <ul>
+            <li>
+              <a
+                href="/Users/dejahgadsden/2023/fall/webdev/kanbas-react-web-app/public/kanbas/home.html"
+                >Home</a
+              >
+            </li>
+            <li><a href="#">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li>
+              <a
+                href="/Users/dejahgadsden/2023/fall/webdev/kanbas-react-web-app/public/kanbas/assignments/index.html"
+                >Assignments</a
+              >
+            </li>
+            <li><a href="#">Quizzes</a></li>
+            <li>
+              <a
+                href="/Users/dejahgadsden/2023/fall/webdev/kanbas-react-web-app/public/kanbas/grades.html"
+                >Grades</a
+              >
+            </li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Page</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </td>
+        <td>
+          <!--Third Col Assignment Editor-->
+          <select>
+            <option value="speed-grade">SpeedGrader</option>
+          </select>
+          <hr />
+          <h3>Assignment Name</h3>
+          <input />
+          <br />
+          <br />
+
+          <form id="textarea">
+            <textarea cols="30" rows="5"></textarea>
+          </form>
+          <label for="assignment-points"> Points: </label>
+          <input type="point" id="assignment-points" />
+          <br />
+          <br />
+
+          <label for="assignment-group"> Assignment Group: </label>
+          <select id="assignment-group">
+            <option value="assigmnent">ASSIGNMENTS</option>
+          </select>
+          <br />
+          <br />
+          <label for="display-grade"> Display Grade as: </label>
+          <select id="display-grade">
+            <option value="percentage">Percentage</option>
+          </select>
+          <br />
+          <br />
+          <label for="sub-type"> Submission Type: </label>
+          <select id="sub-type">
+            <option value="online">Online</option>
+          </select>
+          <br />
+          <br />
+          <label>Online Entry Options:</label><br />
+          <input type="checkbox" value=TEXT" name="check-online-opt"
+          id="chkbox-text" />
+          <input type="checkbox" />
+          <label for="chkbox-text">Text Entry</label> <br />
+          <input type="checkbox" value=WEBSITE" name="check-online-opt"
+          id="chkbox-web" />
+          <label for="chkbox-web">Website URL</label> <br />
+          <input
+            type="checkbox"
+            value="MEDIA"
+            name="check-online-opt"
+            id="chkbox-media"
+            checked
+          />
+          <label for="chkbox-media">Media Recording</label> <br />
+          <input
+            type="checkbox"
+            value="STUDENT"
+            name="check-online-opt"
+            id="chkbox-stud-ann"
+          />
+          <label for="chkbox-stud-ann">Student Annotation</label> <br />
+          <input
+            type="checkbox"
+            value="FILE"
+            name="check-online-opt"
+            id="chkbox-file"
+          />
+          <label for="chkbox-file">File Uploads</label>
+          <br />
+          <br />
+          <label for="sub-attempts"> Submission Attemps: </label>
+          <select id="sub-attempts">
+            <option value="Online">Online</option>
+          </select>
+          <br />
+          <br />
+          <label for="peer-review"> Plagiarism Review: </label>
+          <select id="peer-review">
+            <option value="none">None</option>
+          </select>
+          <br />
+          <br />
+          <label>Group Assignment:</label><br />
+          <input type="checkbox" value=GROUP" name="group-ass-opt"
+          id="chkbox-group" />
+          <label for="chkbox-group">This is a group assignment</label> <br />
+          <br />
+          <label>Peer Reviews:</label><br />
+          <input type="checkbox" value=PEER" name="peer-review-opt"
+          id="chkbox-peer" />
+          <label for="chkbox-peer">Text Entry</label> <br />
+          <br />
+          <label for="assign-to"> Assign: </label>
+          <label id="assign-to" for="assigned">Assign to</label><br />
+          <input type="assign" id="assigned" />
+          <br />
+          <br />
+          <label for="text-fields-due"> Due: </label>
+          <input type="date" id="text-fields-due" value="2023-01-09" /><br />
+          <br />
+          <label for="text-fields-availiable">Available from: </label>
+          <input
+            type="date"
+            id="text-fields-availiable"
+            value="2023-01-09"
+          /><br />
+          <br />
+          <label for="text-fields-until"> Until: </label>
+          <input type="date" id="text-fields-until" value="2023-01-09" /><br />
+          <br />
+          <a
+            href="/Users/dejahgadsden/2023/fall/webdev/kanbas-react-web-app/public/kanbas/assignments/index.html"
+            ><button type="button">Cancel</button></a
+          >
+          <a
+            href="/Users/dejahgadsden/2023/fall/webdev/kanbas-react-web-app/public/kanbas/assignments/index.html"
+            ><button type="button">Save</button></a
+          >
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
