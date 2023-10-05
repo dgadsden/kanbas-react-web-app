@@ -1,0 +1,323 @@
+/* body {
+    font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+} */
+
+/*navbar styling*/
+#sidebar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 85px;
+}
+
+.nav-item i {
+    color: #c70000;
+    font-size: x-large;
+}
+
+.nav-item .fa-user {
+    color: lightgray;
+
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar .kanbas-nav {
+    background-color: black;
+    height: 100%;
+    width: 85px;
+    text-align: center;
+    position: fixed;
+}
+
+ #sidebar .nav-item {
+     margin-bottom: 5px;
+ }
+
+ #sidebar .nav-item a {
+     padding: 5px 0;
+ }
+
+ .nav-item.active {
+     background-color: white;
+     color: #c70000;
+ }
+ .nav-item.active a {
+    color: #c70000;
+ }
+ 
+.nav-item a:focus {
+    background-color: white; 
+    color: #c70000;
+}
+
+
+/*styling for page header*/
+#page-header {
+    margin: 10px;
+    padding: 5px;
+    display: inline;
+}
+
+
+
+/* for menu bars*/
+#page-header i {
+    color: #c70000;
+    padding: 10px;
+    font-size: x-large;
+}
+
+#page-header b {
+    font-size: large;
+    margin-left: 10px;
+    font-weight: 325;
+}
+
+#page-header a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.sub-col{
+    background-color: white;
+    text-align: left;
+    height: 100%;
+    width: 200px;
+}
+
+#page-content{
+    margin-left: 85px;
+}
+.submenu ul{
+    list-style-type: none;
+    padding: 0;
+}
+.sub-item {
+    margin-bottom: 15px;
+}
+.sub-item a{
+    color: #c70000;
+    text-decoration: none;
+   
+    /* Add more submenu item styles as needed */
+}
+
+/*hide this submenu menu account is not active*/
+#account-sub {
+    display: none;
+}
+
+/*show this submenu menu account is active*/
+#account-sub:target {
+    display: flex;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+
+#cources-sub{
+    display: none;
+}
+
+#cources-sub:target {
+    display: block;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+
+/* border and change text color to indicate the page your on*/
+.sub-item a:focus{
+    border-left: 2px solid black;
+    color: black;
+    padding: 5px;
+}
+.sub-item.active a{
+    border-left: 2px solid black;
+    color: black;
+    padding: 5px;
+}
+
+#profile-content{
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: left;
+    align-items: left;
+}
+
+#profile-content a {
+    text-decoration: none;
+    color: #c70000;
+}
+
+#acconut-page-pfp {
+    color:lightgray;
+    font-size: 100px;
+    padding: 30px;
+}
+
+
+.link-arrow {
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10px;
+}
+/*profile page specific things*/
+#profile-content button {
+    border-color: lightgray;
+    font-weight: 325;
+    margin-bottom: 15px;
+}
+
+#profile-content .form-control{
+    width: 75%;
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+
+#profile-content .form-select {
+    width: 50%;
+    margin-bottom: 30px;
+    margin-right: 0;
+}
+
+#cancel-save-buttons {
+    text-align: center;
+}
+
+/*dashboard specific thingsß*/
+#dash-content .card {
+    margin: 15px;
+    width: 250px;
+}
+
+#dash-content a {
+    text-decoration: none;
+    color: gray;
+    font-size: large;
+}
+
+#dash-content .card p {
+    text-decoration: none;
+    color: gray;
+    font-size: small;
+}
+
+#dash-content .card h5 {
+    color: black;
+}
+
+#dash-header {
+    margin: 10px;
+    padding: 5px;
+    font-size: 35px;  
+    font-weight: 200;
+}
+
+#course-buttons .form-select{
+    width: fit-content;
+    display: inline-block;
+}
+
+#course-buttons {
+    text-align: right;
+}
+
+#checkmark {
+    color: green;
+}
+
+.list-group-item i {
+    margin: 5px;
+}
+
+#modules a,#course-status a {
+    color: #c70000;
+    text-decoration: none;
+}
+
+.submenu p {
+    font-weight: 200;
+    font-size: smaller;
+}
+
+#course-status p{
+    font-size: x-large;
+    text-align: left;
+}
+#course-status button {
+    margin-bottom: 5px;
+    border-color: gray;
+}
+
+#course-stat-btn1 button {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#course-stat-btn2 button {
+    width: 75%;
+    text-align: left;
+}
+
+#page-content ul{
+    margin-bottom: 30px;
+    
+
+}
+
+#assigmnent-edit-content .card{
+    padding: 15px;
+
+}
+
+#assigmnent-edit-content p, label, option {
+    font-weight: 300;
+    text-align: left;
+}
+
+#assigmnent-edit-content .row{
+    margin-bottom: 15px;
+
+}
+
+#published {
+    color: green;
+    margin: 5px;
+}
+
+#grades-search {
+    width: fit-content;
+}
+
+.student {
+    color: #c70000;
+}
+
+.btn {
+    border-color: gray; 
+}
+
+.breadcrumb .breadcrumb-item{
+ color: #c70000;
+}
+
+#assignments-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.list-group,.list-group-item {
+    border-radius: 0 !important;
+}
+
+

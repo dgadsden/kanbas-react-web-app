@@ -3,118 +3,222 @@
   <head>
     <meta charset="UTF-8" />
     <title>Kanbas Grades</title>
+    <!--Boostrap Link-->
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Fontawesome Link-->
+    <link href="../vendors/fontawesome/css/all.css" rel="stylesheet" />
+
+    <link href="index.css" rel="stylesheet" />
   </head>
   <body>
-    <table width="100%">
-      <tr valign="baseline">
-        <td style="width: 10%">
-          <!-- First Column: Navigation Links -->
-          <ul>
-            <li>
-              <a href="/kanbas/profile/index.html">Account</a>
-            </li>
-            <li><a href="#">Dashboard</a></li>
-            <li>
-              <a href="/kanbas/course.html">Courses</a>
-            </li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Helps</a></li>
-          </ul>
-        </td>
-        <td style="width: 20%">
-          <!-- Second Column: Course Navigation -->
-          <ul>
-            <li>
-              <a href="/kanbas/home.html">Home</a>
-            </li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
-            <li>
-              <a href="/kanbas/assignments/index.html">Assignments</a>
-            </li>
-            <li><a href="#">Quizzes</a></li>
-            <li>
-              <a href="/kanbas/grades.html">Grades</a>
-            </li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Page</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="#">Settings</a></li>
-          </ul>
-        </td>
-        <td>
-          <!-- Third Column: Grade Content -->
-          <select>
-            <option value="GRADEBOOK">Gradebook</option>
-          </select>
-          <button type="button">Import</button>
-          <select>
-            <option value="EXPORT">Export</option>
-          </select>
-          <button type="button">Configure</button>
-          <h4>Student Names</h4>
-          <input placeholder="Search Students" />
-          <h4>Assignment Names</h4>
-          <input placeholder="Search Assignments" />
-          <br />
-          <br />
-          <button type="button">Apply Filters</button>
-          <br />
-          <br />
-          <table border="1" width="100%">
-            <!--Table for Gradebook-->
-            <thead>
-              <tr>
-                <td>Student Name</td>
-                <td>A1 Setup Out of 100</td>
-                <td>A2 HTML Out of 100</td>
-                <td>A3 Out of 100</td>
-                <td>A4 CSS Bootstrap Out of 100</td>
-              </tr>
-            </thead>
-            <tr>
-              <td>Scoobert Doo</td>
-              <td align="center"><input value="75" /></td>
-              <td align="center"><input value="80" /></td>
-              <td align="center"><input value="68" /></td>
-              <td align="center"><input value="100" /></td>
-            </tr>
-            <tr>
-              <td>Casper McFadden</td>
-              <td align="center"><input value="90" /></td>
-              <td align="center"><input value="100" /></td>
-              <td align="center"><input value="89" /></td>
-              <td align="center"><input value="80" /></td>
-            </tr>
-            <tr>
-              <td>Stewart Gilligan Griffin</td>
-              <td align="center"><input value="60" /></td>
-              <td align="center"><input value="55" /></td>
-              <td align="center"><input value="70" /></td>
-              <td align="center"><input value="85" /></td>
-            </tr>
-            <tr>
-              <td>Arthur Timothy Read</td>
-              <td align="center"><input /></td>
-              <td align="center"><input /></td>
-              <td align="center"><input /></td>
-              <td align="center"><input /></td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
+    <div class="container-fluid">
+      <div class="row">
+        <!--Nav-->
+        <div class="col-md-2" id="sidebar">
+          <nav class="kanbas-nav">
+            <a href="/public/kanbas/home.html">
+              <img
+                src="/public/images/NU_RGB_Notched-N_motto_RW.png"
+                height="85"
+                width="85"
+            /></a>
+            <ul class="nav nav-pills nav-flush flex-column">
+              <li class="nav-item" tabindex="1">
+                <a href="#account-sub" id="account" class="active">
+                  <i class="fas fa-user"></i> <br/ >Account</a
+                >
+              </li>
+              <li class="nav-item" tabindex="2">
+                <a href="/public/kanbas/dashboard.html">
+                  <i class="fas fa-tachometer-alt"></i> <br/ >Dashboard</a
+                >
+              </li>
+              <li class="nav-item active" tabindex="3" id="course">
+                <a href="#cources-sub" id="cources"
+                  ><i class="fas fa-book"></i> <br />Courses</a
+                >
+              </li>
+              <li class="nav-item" tabindex="4">
+                <a href="#">
+                  <i class="far fa-calendar-alt"></i><br />Calendar</a
+                >
+              </li>
+              <li class="nav-item" tabindex="5">
+                <a href="#"
+                  ><i class="fas fa-envelope-open-text"></i><br />Inbox</a
+                >
+              </li>
+              <li class="nav-item" tabindex="6">
+                <a href="#"><i class="far fa-clock"></i><br />History</a>
+              </li>
+              <li class="nav-item" tabindex="7">
+                <a href="#"><i class="fas fa-tv"></i><br />Studio</a>
+              </li>
+              <li class="nav-item" tabindex="8">
+                <a href="#"><i class="fas fa-sign-out-alt"></i><br />Commons</a>
+              </li>
+              <li class="nav-item" tabindex="9">
+                <a href="#"
+                  ><i class="far fa-question-circle"></i><br />Helps</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--Header-->
+        <div class="col-md-10" id="page-header">
+          <div class="row">
+            <div class="col-1">
+              <a href="#cources-sub"><i class="fas fa-bars"></i></a>
+            </div>
+            <div class="col">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>'">
+                  <li class="breadcrumb-item">
+                    <a href="#">CS5610.11744.202310</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Grades
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <!--Page Contenxt and Menus-->
+      <div class="row" id="page-content">
+        <div class="col-md-2">
+          <nav id="account-sub" class="submenu">
+            <ul>
+              <p class="card-text">202410_1 Fall 2023 Semester Full Term</p>
+              <li class="sub-item"><a href="#">Notifications</a></li>
+              <li class="sub-item">
+                <a href="/public/kanbas/profile/index.html">Profile</a>
+              </li>
+              <li class="sub-item"><a href="#">Files</a></li>
+              <li class="sub-item"><a href="#">Settings</a></li>
+              <li class="sub-item"><a href="#">eProtfolios</a></li>
+              <li class="sub-item"><a href="#">Shared Content</a></li>
+              <li class="sub-item"><a href="#">The Hub</a></li>
+              <li class="sub-item"><a href="#">Qwickly Course Tools</a></li>
+              <li class="sub-item"><a href="#">Global Announcements</a></li>
+            </ul>
+          </nav>
+          <nav id="cources-sub" class="submenu">
+            <ul>
+              <p class="card-text">202410_1 Fall 2023 Semester Full Term</p>
+              <li class="sub-item">
+                <a href="/kanbas/home.html">Home</a>
+              </li>
+              <li class="sub-item"><a href="#">Modules</a></li>
+              <li class="sub-item"><a href="#">Piazza</a></li>
+              <li class="sub-item"><a href="#">Zoom Meetings</a></li>
+              <li class="sub-item">
+                <a href="/kanbas/assignments/index.html">Assignments</a>
+              </li>
+              <li class="sub-item"><a href="#">Quizzes</a></li>
+              <li class="sub-item active">
+                <a href="/kanbas/grades.html">Grades</a>
+              </li>
+              <li class="sub-item"><a href="#">People</a></li>
+              <li class="sub-item"><a href="#">Panopto Video</a></li>
+              <li class="sub-item"><a href="#">Discussions</a></li>
+              <li class="sub-item"><a href="#">Announcements</a></li>
+              <li class="sub-item"><a href="#">Page</a></li>
+              <li class="sub-item"><a href="#">Files</a></li>
+              <li class="sub-item"><a href="#">Rubrics</a></li>
+              <li class="sub-item"><a href="#">Outcomes</a></li>
+              <li class="sub-item"><a href="#">Collaborations</a></li>
+              <li class="sub-item"><a href="#">Syllabus</a></li>
+              <li class="sub-item"><a href="#">Settings</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col">
+          <div class="row" id="course-buttons">
+            <div class="col">
+              <button type="button" class="btn btn-light">
+                <i class="fas fa-file-export"></i> Export
+              </button>
+              <button type="button" class="btn btn-light">
+                <i class="fas fa-file-import"></i> Import
+              </button>
+              <button type="button" class="btn btn-light">
+                <i class="fas fa-cog"></i>
+              </button>
+              <button type="button" class="btn btn-light">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input class="form-control" placeholder="Search Students" />
+            </div>
+            <div class="col">
+              <input class="form-control" placeholder="Search Assignments" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col float-start">
+              <button class="btn btn-light">
+                <i class="fas fa-filter"> </i> Apply Filters
+              </button>
+            </div>
+          </div>
+          <!-- Third Column: Course Content -->
+          <div class="row">
+            <div class="col" id="assignments-list">
+              <table class="table table-striped">
+                <!--Table for Gradebook-->
+                <thead>
+                  <tr>
+                    <td>Student Name</td>
+                    <td>A1 Setup Out of 100</td>
+                    <td>A2 HTML Out of 100</td>
+                    <td>A3 Out of 100</td>
+                    <td>A4 CSS Bootstrap Out of 100</td>
+                  </tr>
+                </thead>
+                <tr>
+                  <td class="student" style="color: #c70000">Scoobert Doo</td>
+                  <td align="center"><input value="75" /></td>
+                  <td align="center"><input value="80" /></td>
+                  <td align="center"><input value="68" /></td>
+                  <td align="center"><input value="100" /></td>
+                </tr>
+                <tr>
+                  <td class="student">Casper McFadden</td>
+                  <td align="center"><input value="90" /></td>
+                  <td align="center"><input value="100" /></td>
+                  <td align="center"><input value="89" /></td>
+                  <td align="center"><input value="80" /></td>
+                </tr>
+                <tr>
+                  <td class="student" style="color: #c70000">
+                    Stewart Gilligan Griffin
+                  </td>
+                  <td align="center"><input value="60" /></td>
+                  <td align="center"><input value="55" /></td>
+                  <td align="center"><input value="70" /></td>
+                  <td align="center"><input value="85" /></td>
+                </tr>
+                <tr>
+                  <td class="student">Arthur Timothy Read</td>
+                  <td align="center"><input value="100" /></td>
+                  <td align="center"><input value="100" /></td>
+                  <td align="center"><input value="100" /></td>
+                  <td align="center"><input value="100" /></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
   </body>
 </html>

@@ -3,65 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <title>Profile</title>
+    <!--Bootstrap link-->
+    <link
+      href="../../vendors/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--Fontawesome Link-->
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+
+    <link href="../index.css" rel="stylesheet" />
   </head>
   <body>
-    <table width="100%">
-      <tr valign="baseline">
-        <td>
-          <!-- First Column: Navigation Links -->
-          <ul>
-            <li>
-              <a href="/kanbas/profile/index.html">Account</a>
-            </li>
-            <li><a href="#">Dashboard</a></li>
-            <li>
-              <a href="/kanbas/course.html">Courses</a>
-            </li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Helps</a></li>
-          </ul>
-        </td>
-        <td style="width: 20%">
-          <!-- Second Column: Course Navigation -->
-          <ul>
-            <li><a href="#">Notifications</a></li>
-            <li>
-              <a href="/kanbas/profile/index.html">Profile</a>
-            </li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">eProtfolios</a></li>
-            <li><a href="#">Shared Content</a></li>
-            <li><a href="#">The Hub</a></li>
-            <li><a href="#">Qwickly Course Tools</a></li>
-            <li><a href="#">Global Announcements</a></li>
-          </ul>
-        </td>
-        <td>
-          <!--Third Col Profile Content-->
-          <p style="font-size: large">Dejah Gadsden's Profile</p>
+    <div class="container-fluid">
+      <!--Kanbas Nav and Page Header-->
+      <div class="row">
+        <!--Nav-->
+        <div class="col-md-2" id="sidebar">
+          <nav class="kanbas-nav">
+            <a href="/public/kanbas/home.html">
+              <img
+                src="/public/images/NU_RGB_Notched-N_motto_RW.png"
+                height="85"
+                width="85"
+            /></a>
+            <ul class="nav nav-pills nav-flush flex-column">
+              <li class="nav-item active" tabindex="1">
+                <a href="#account-sub" id="account" class="active">
+                  <i class="fas fa-user"></i> <br/ >Account</a
+                >
+              </li>
+              <li class="nav-item" tabindex="2">
+                <a href="/public/kanbas/dashboard.html">
+                  <i class="fas fa-tachometer-alt"></i> <br/ >Dashboard</a
+                >
+              </li>
+              <li class="nav-item" tabindex="3" id="course">
+                <a href="#cources-sub" id="cources"
+                  ><i class="fas fa-book"></i> <br />Courses</a
+                >
+              </li>
+              <li class="nav-item" tabindex="4">
+                <a href="#">
+                  <i class="far fa-calendar-alt"></i><br />Calendar</a
+                >
+              </li>
+              <li class="nav-item" tabindex="5">
+                <a href="#"
+                  ><i class="fas fa-envelope-open-text"></i><br />Inbox</a
+                >
+              </li>
+              <li class="nav-item" tabindex="6">
+                <a href="#"><i class="far fa-clock"></i><br />History</a>
+              </li>
+              <li class="nav-item" tabindex="7">
+                <a href="#"><i class="fas fa-tv"></i><br />Studio</a>
+              </li>
+              <li class="nav-item" tabindex="8">
+                <a href="#"><i class="fas fa-sign-out-alt"></i><br />Commons</a>
+              </li>
+              <li class="nav-item" tabindex="9">
+                <a href="#"
+                  ><i class="far fa-question-circle"></i><br />Helps</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--Header-->
+        <div class="col-md-10" id="page-header">
+          <a href="#account-sub"
+            ><i class="fas fa-bars"></i><b>Dejah Gadsden's Profile</b></a
+          >
           <hr />
-          <p style="font-size: 200%">
-            Dejah Gadsden
-            <a href="/kanbas/profile/edit.html"
-              ><button type="button">Edit Profile</button></a
-            >
-          </p>
-          <p style="font-size: 150%">Contact</p>
-          <p>
-            No registered services, you can add some on the
-            <a href="#">settings</a> page
-          </p>
-          <p style="font-size: 150%">Biography</p>
-          <p>Student; Food and Movie enjoyer.</p>
-          <p style="font-size: 150%">Links</p>
-          <p><a href="https://www.youtube.com/">YouTube</a> page</p>
-        </td>
-      </tr>
-    </table>
+        </div>
+      </div>
+
+      <!--Sub Menu and Page Content-->
+      <div class="row" id="page-content">
+        <!--Menus-->
+        <div class="col-2 sub-col">
+          <nav id="account-sub" class="submenu">
+            <ul>
+              <li class="sub-item" tabindex="1">
+                <a href="#">Notifications</a>
+              </li>
+              <li class="sub-item active">
+                <a href="/public/kanbas/profile/index.html">Profile</a>
+              </li>
+              <li class="sub-item" tabindex="2"><a href="#">Files</a></li>
+              <li class="sub-item" tabindex="3"><a href="#">Settings</a></li>
+              <li class="sub-item" tabindex="4"><a href="#">eProtfolios</a></li>
+              <li class="sub-item" tabindex="5">
+                <a href="#">Shared Content</a>
+              </li>
+              <li class="sub-item" tabindex="6"><a href="#">The Hub</a></li>
+              <li class="sub-item" tabindex="7">
+                <a href="#">Qwickly Course Tools</a>
+              </li>
+              <li class="sub-item" tabindex="8">
+                <a href="#">Global Announcements</a>
+              </li>
+            </ul>
+          </nav>
+          <nav id="cources-sub" class="submenu">
+            <ul>
+              <li class="sub-item">
+                <a href="/kanbas/home.html">Home</a>
+              </li>
+              <li class="sub-item" tabindex="1"><a href="#">Modules</a></li>
+              <li class="sub-item" tabindex="2"><a href="#">Piazza</a></li>
+              <li class="sub-item" tabindex="3">
+                <a href="#">Zoom Meetings</a>
+              </li>
+              <li class="sub-item" tabindex="4">
+                <a href="/kanbas/assignments/index.html">Assignments</a>
+              </li>
+              <li class="sub-item"><a href="#">Quizzes</a></li>
+              <li class="sub-item">
+                <a href="/kanbas/grades.html">Grades</a>
+              </li>
+              <li class="sub-item" tabindex="5"><a href="#">People</a></li>
+              <li class="sub-item" tabindex="6">
+                <a href="#">Panopto Video</a>
+              </li>
+              <li class="sub-item" tabindex="7"><a href="#">Discussions</a></li>
+              <li class="sub-item" tabindex="8">
+                <a href="#">Announcements</a>
+              </li>
+              <li class="sub-item" tabindex="9"><a href="#">Page</a></li>
+              <li class="sub-item" tabindex="10"><a href="#">Files</a></li>
+              <li class="sub-item" tabindex="11"><a href="#">Rubrics</a></li>
+              <li class="sub-item" tabindex="12"><a href="#">Outcomes</a></li>
+              <li class="sub-item" tabindex="13">
+                <a href="#">Collaborations</a>
+              </li>
+              <li class="sub-item" tabindex="14"><a href="#">Syllabus</a></li>
+              <li class="sub-item" tabindex="15"><a href="#">Settings</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!--Page Content-->
+        <div class="col-md-8" id="profile-content">
+          <!--Third Col Profile Content-->
+          <div class="row">
+            <div class="col">
+              <i id="acconut-page-pfp" class="fas fa-user fa-lg"></i>
+              <p style="font-size: 200%">Dejah Gadsden</p>
+              <p style="font-size: 150%">Contact</p>
+              <p>
+                No registered services, you can add some on the
+                <a href="#">settings</a> page
+              </p>
+              <p style="font-size: 150%">Biography</p>
+              <p>Student; Food and Movie enjoyer.</p>
+              <p style="font-size: 150%">Links</p>
+              <p><a href="https://www.youtube.com/">YouTube</a> page</p>
+            </div>
+            <div class="col" id="button">
+              <a href="/public/kanbas/profile/edit.html"
+                ><button type="button" class="btn btn-light float-end">
+                  <i class="fas fa-pencil-alt"></i> Edit Profile
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

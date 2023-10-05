@@ -3,174 +3,330 @@
   <head>
     <meta charset="UTF-8" />
     <title>Edit Assignments</title>
+    <!--Bootstrap link-->
+    <link
+      href="../../vendors/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--Fontawesome Link-->
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+
+    <link href="../index.css" rel="stylesheet" />
   </head>
   <body>
-    <table width="100%">
-      <tr valign="baseline">
-        <td style="width: 10%">
-          <!-- First Column: Navigation Links -->
-          <ul>
-            <li>
-              <a href="/kanbas/profile/index.html">Account</a>
-            </li>
-            <li><a href="#">Dashboard</a></li>
-            <li>
-              <a href="/kanbas/course.html">Courses</a>
-            </li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Helps</a></li>
-          </ul>
-        </td>
-        <td style="width: 20%">
-          <!-- Second Column: Course Navigation -->
-          <ul>
-            <li>
-              <a href="/kanbas/home.html">Home</a>
-            </li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
-            <li>
-              <a href="/kanbas/assignments/index.html">Assignments</a>
-            </li>
-            <li><a href="#">Quizzes</a></li>
-            <li>
-              <a href="/kanbas/grades.html">Grades</a>
-            </li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Page</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="#">Settings</a></li>
-          </ul>
-        </td>
-        <td>
-          <!--Third Col Assignment Editor-->
-          <select>
-            <option value="speed-grade">SpeedGrader</option>
-          </select>
-          <hr />
-          <h3>Assignment Name</h3>
-          <input />
-          <br />
-          <br />
+    <div>
+      <div class="container-fluid">
+        <div class="row">
+          <!--Nav-->
+          <div class="col-md-2" id="sidebar">
+            <nav class="kanbas-nav">
+              <a href="/public/kanbas/home.html">
+                <img
+                  src="/public/images/NU_RGB_Notched-N_motto_RW.png"
+                  height="85"
+                  width="85"
+              /></a>
+              <ul class="nav nav-pills nav-flush flex-column">
+                <li class="nav-item" tabindex="1">
+                  <a href="#account-sub" id="account" class="active">
+                    <i class="fas fa-user"></i> <br/ >Account</a
+                  >
+                </li>
+                <li class="nav-item" tabindex="2">
+                  <a href="/public/kanbas/dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i> <br/ >Dashboard</a
+                  >
+                </li>
+                <li class="nav-item active" tabindex="3" id="course">
+                  <a href="#cources-sub" id="cources"
+                    ><i class="fas fa-book"></i> <br />Courses</a
+                  >
+                </li>
+                <li class="nav-item" tabindex="4">
+                  <a href="#">
+                    <i class="far fa-calendar-alt"></i><br />Calendar</a
+                  >
+                </li>
+                <li class="nav-item" tabindex="5">
+                  <a href="#"
+                    ><i class="fas fa-envelope-open-text"></i><br />Inbox</a
+                  >
+                </li>
+                <li class="nav-item" tabindex="6">
+                  <a href="#"><i class="far fa-clock"></i><br />History</a>
+                </li>
+                <li class="nav-item" tabindex="7">
+                  <a href="#"><i class="fas fa-tv"></i><br />Studio</a>
+                </li>
+                <li class="nav-item" tabindex="8">
+                  <a href="#"
+                    ><i class="fas fa-sign-out-alt"></i><br />Commons</a
+                  >
+                </li>
+                <li class="nav-item" tabindex="9">
+                  <a href="#"
+                    ><i class="far fa-question-circle"></i><br />Helps</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Header-->
+          <div class="col-md-10" id="page-header">
+            <div class="row">
+              <div class="col-1">
+                <a href="#cources-sub"><i class="fas fa-bars"></i></a>
+              </div>
+              <div class="col">
+                <nav
+                  aria-label="breadcrumb"
+                  style="--bs-breadcrumb-divider: '>'"
+                >
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="#">CS5610.11744.202310</a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">
+                      Assignments
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      A1 ENV + ...
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+        <!--Page Contenxt and Menus-->
+        <div class="row" id="page-content">
+          <div class="col-md-2">
+            <nav id="account-sub" class="submenu">
+              <ul>
+                <p class="card-text">202410_1 Fall 2023 Semester Full Term</p>
+                <li class="sub-item"><a href="#">Notifications</a></li>
+                <li class="sub-item">
+                  <a href="/public/kanbas/profile/index.html">Profile</a>
+                </li>
+                <li class="sub-item"><a href="#">Files</a></li>
+                <li class="sub-item"><a href="#">Settings</a></li>
+                <li class="sub-item"><a href="#">eProtfolios</a></li>
+                <li class="sub-item"><a href="#">Shared Content</a></li>
+                <li class="sub-item"><a href="#">The Hub</a></li>
+                <li class="sub-item"><a href="#">Qwickly Course Tools</a></li>
+                <li class="sub-item"><a href="#">Global Announcements</a></li>
+              </ul>
+            </nav>
+            <nav id="cources-sub" class="submenu">
+              <ul>
+                <p class="card-text">202410_1 Fall 2023 Semester Full Term</p>
+                <li class="sub-item">
+                  <a href="/kanbas/home.html">Home</a>
+                </li>
+                <li class="sub-item"><a href="#">Modules</a></li>
+                <li class="sub-item"><a href="#">Piazza</a></li>
+                <li class="sub-item"><a href="#">Zoom Meetings</a></li>
+                <li class="sub-item active">
+                  <a href="/kanbas/assignments/index.html">Assignments</a>
+                </li>
+                <li class="sub-item"><a href="#">Quizzes</a></li>
+                <li class="sub-item">
+                  <a href="/kanbas/grades.html">Grades</a>
+                </li>
+                <li class="sub-item"><a href="#">People</a></li>
+                <li class="sub-item"><a href="#">Panopto Video</a></li>
+                <li class="sub-item"><a href="#">Discussions</a></li>
+                <li class="sub-item"><a href="#">Announcements</a></li>
+                <li class="sub-item"><a href="#">Page</a></li>
+                <li class="sub-item"><a href="#">Files</a></li>
+                <li class="sub-item"><a href="#">Rubrics</a></li>
+                <li class="sub-item"><a href="#">Outcomes</a></li>
+                <li class="sub-item"><a href="#">Collaborations</a></li>
+                <li class="sub-item"><a href="#">Syllabus</a></li>
+                <li class="sub-item"><a href="#">Settings</a></li>
+              </ul>
+            </nav>
+          </div>
 
-          <form id="textarea">
-            <textarea cols="30" rows="5"></textarea>
-          </form>
-          <label for="assignment-points"> Points: </label>
-          <input type="point" id="assignment-points" />
-          <br />
-          <br />
+          <div class="col">
+            <div class="col">
+              <div class="row" id="course-buttons">
+                <div class="col">
+                  <i class="fas fa-check-circle" id="checkmark"> </i
+                  ><b id="published">Published</b>
+                  <button
+                    type="button"
+                    class="btn btn-light"
+                    href="/public/kanbas/assignments/edit.html"
+                  >
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <hr />
+                </div>
+              </div>
+            </div>
+            <!--Third Col Assignment Editor-->
+            <div class="col-5" id="assigmnent-edit-content">
+              <div class="row">
+                <p>Assignment Name</p>
+                <input id="textarea" class="form-control" />
+              </div>
 
-          <label for="assignment-group"> Assignment Group: </label>
-          <select id="assignment-group">
-            <option value="assigmnent">ASSIGNMENTS</option>
-          </select>
-          <br />
-          <br />
-          <label for="display-grade"> Display Grade as: </label>
-          <select id="display-grade">
-            <option value="percentage">Percentage</option>
-          </select>
-          <br />
-          <br />
-          <label for="sub-type"> Submission Type: </label>
-          <select id="sub-type">
-            <option value="online">Online</option>
-          </select>
-          <br />
-          <br />
-          <label>Online Entry Options:</label><br />
-          <input type="checkbox" value=TEXT" name="check-online-opt"
-          id="chkbox-text" />
-          <input type="checkbox" />
-          <label for="chkbox-text">Text Entry</label> <br />
-          <input type="checkbox" value=WEBSITE" name="check-online-opt"
-          id="chkbox-web" />
-          <label for="chkbox-web">Website URL</label> <br />
-          <input
-            type="checkbox"
-            value="MEDIA"
-            name="check-online-opt"
-            id="chkbox-media"
-            checked
-          />
-          <label for="chkbox-media">Media Recording</label> <br />
-          <input
-            type="checkbox"
-            value="STUDENT"
-            name="check-online-opt"
-            id="chkbox-stud-ann"
-          />
-          <label for="chkbox-stud-ann">Student Annotation</label> <br />
-          <input
-            type="checkbox"
-            value="FILE"
-            name="check-online-opt"
-            id="chkbox-file"
-          />
-          <label for="chkbox-file">File Uploads</label>
-          <br />
-          <br />
-          <label for="sub-attempts"> Submission Attemps: </label>
-          <select id="sub-attempts">
-            <option value="Online">Online</option>
-          </select>
-          <br />
-          <br />
-          <label for="peer-review"> Plagiarism Review: </label>
-          <select id="peer-review">
-            <option value="none">None</option>
-          </select>
-          <br />
-          <br />
-          <label>Group Assignment:</label><br />
-          <input type="checkbox" value=GROUP" name="group-ass-opt"
-          id="chkbox-group" />
-          <label for="chkbox-group">This is a group assignment</label> <br />
-          <br />
-          <label>Peer Reviews:</label><br />
-          <input type="checkbox" value=PEER" name="peer-review-opt"
-          id="chkbox-peer" />
-          <label for="chkbox-peer">Text Entry</label> <br />
-          <br />
-          <label for="assign-to"> Assign: </label>
-          <label id="assign-to" for="assigned">Assign to</label><br />
-          <input type="assign" id="assigned" />
-          <br />
-          <br />
-          <label for="text-fields-due"> Due: </label>
-          <input type="date" id="text-fields-due" value="2023-01-09" /><br />
-          <br />
-          <label for="text-fields-availiable">Available from: </label>
-          <input
-            type="date"
-            id="text-fields-availiable"
-            value="2023-01-09"
-          /><br />
-          <br />
-          <label for="text-fields-until"> Until: </label>
-          <input type="date" id="text-fields-until" value="2023-01-09" /><br />
-          <br />
-          <a href="/kanbas/assignments/index.html"
-            ><button type="button">Cancel</button></a
-          >
-          <a href="/kanbas/assignments/index.html"
-            ><button type="button">Save</button></a
-          >
-        </td>
-      </tr>
-    </table>
+              <div class="row">
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="5"
+                ></textarea>
+              </div>
+
+              <div class="row">
+                <label for="assignment-points"> Points </label>
+                <input
+                  type="point"
+                  class="form-control"
+                  id="assignment-points"
+                />
+              </div>
+
+              <div class="row">
+                <label for="assignment-group"> Assignment Group </label>
+                <select id="assignment-group" class="form-select">
+                  <option value="assigmnent">ASSIGNMENTS</option>
+                </select>
+              </div>
+
+              <div class="row">
+                <label for="display-grade"> Display Grade as </label>
+                <select id="display-grade" class="form-select">
+                  <option value="percentage">Percentage</option>
+                </select>
+              </div>
+              <div class="row">
+                <label for="sub-type"> Submission Type </label>
+                <div class="card">
+                  <select id="sub-type" class="form-select">
+                    <option value="online">Online</option>
+                  </select>
+
+                  <div class="form-check" id="sub-types">
+                    <label for="sub-types">Online Entry Options</label>
+                    <input type="checkbox" value=TEXT" name="check-online-opt"
+                    class="form-check-input" id="chkbox-text" />
+                    <label for="chkbox-text">Text Entry</label> <br />
+                    <input type="checkbox" value=WEBSITE"
+                    name="check-online-opt" id="chkbox-web"
+                    class="form-check-input"/>
+                    <label for="chkbox-web">Website URL</label> <br />
+                    <input
+                      type="checkbox"
+                      value="MEDIA"
+                      name="check-online-opt"
+                      id="chkbox-media"
+                      class="form-check-input"
+                    />
+                    <label for="chkbox-media">Media Recording</label> <br />
+                    <input
+                      type="checkbox"
+                      value="STUDENT"
+                      name="check-online-opt"
+                      id="chkbox-stud-ann"
+                      class="form-check-input"
+                    />
+                    <label for="chkbox-stud-ann">Student Annotation</label>
+                    <br />
+                    <input
+                      type="checkbox"
+                      value="FILE"
+                      name="check-online-opt"
+                      id="chkbox-file"
+                      class="form-check-input"
+                    />
+                    <label for="chkbox-file">File Uploads</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <label for="sub-attempts"> Submission Attemps </label>
+                <div class="card">
+                  <select id="sub-attempts" class="form-select">
+                    <option value="Online">Online</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <label for="peer-review"> Plagiarism Review</label>
+                <div class="card">
+                  <select id="peer-review" class="form-select">
+                    <option value="none">None</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <label>Group Assignment</label>
+                <div class="card">
+                  <div class="form-check">
+                    <label for="chkbox-group">This is a group assignmen</label>
+                    <input type="checkbox" value=GROUP" name="group-ass-opt"
+                    class="form-check-input" id="chkbox-group" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <label>Peer Reviews</label>
+                <div class="card">
+                  <div class="form-check">
+                    <label for="chkbox-peer">Text Entry</label>
+                    <input type="checkbox" value=PEER" name="peer-review-opt"
+                    id="chkbox-peer" class="form-check-input"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <label for="assign-to"> Assign </label>
+                <div class="card">
+                  <label id="assign-to" for="assigned">Assign to</label><br />
+                  <input type="assign" id="assigned" class="form-control" />
+                  <br />
+                  <br />
+                  <label for="text-fields-due"> Due: </label>
+                  <input
+                    type="date"
+                    id="text-fields-due"
+                    value="2023-01-09"
+                  /><br />
+                  <label for="text-fields-availiable">Available from </label>
+                  <input
+                    type="date"
+                    id="text-fields-availiable"
+                    value="2023-01-09"
+                  /><br />
+                  <label for="text-fields-until"> Until: </label>
+                  <input
+                    type="date"
+                    id="text-fields-until"
+                    value="2023-01-09"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col float-end" id="cancel-save-buttons">
+                  <a href="/kanbas/profile/index.html">
+                    <button type="button" class="btn btn-light">Cancel</button>
+                  </a>
+                  <a href="/kanbas/profile/index.html">
+                    <button type="button" class="btn btn-danger">
+                      Save profile
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
