@@ -1,0 +1,22 @@
+.grade-total {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid gray;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    padding: 0px 10px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+b {
+    font-size: large;
+}
+
+.link-class {
+    text-decoration: none;
+}
