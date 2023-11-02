@@ -4,12 +4,16 @@ import db from "../../Database";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { FaEllipsisV } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+
 import "./index.css"
 
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  const modules = useSelector((state) => state.modulesReducer.modules);
+
+
   return (
     <ul className="list-group">
       {modules

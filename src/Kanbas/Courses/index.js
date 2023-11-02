@@ -6,14 +6,15 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import ModuleListEditor from "./Modules/ModulesEditor";
 import { FiMenu } from "react-icons/fi"
 import "./index.css";
 import { useState } from "react";
 
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const location = useLocation();
   const [OpenNav, setOpen] = useState(true);
 
@@ -57,6 +58,9 @@ function Courses() {
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />
             <Route path="Modules" element={<Modules />} />
+            <Route path="Modules/ModulesEditor"
+              element={<ModuleListEditor />}
+            />
             <Route path="Assignments" element={<Assignments />} />
             <Route
               path="Assignments/:assignmentId"
