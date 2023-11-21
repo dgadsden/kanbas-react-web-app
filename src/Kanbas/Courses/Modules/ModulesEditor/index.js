@@ -11,6 +11,9 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { FaEllipsisV } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { findModulesForCourse, createModule } from "../client";
+import * as client from "../client";
+
 
 import "../index.css"
 
@@ -21,15 +24,34 @@ function ModuleListEditor() {
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
+    const handleAddModule = () => {
+        createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
+
+    const handleDeleteModule = (moduleId) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    };
+
+
+
     return (
         <div className="row">
             <div className="col-7">
 
                 <ul className="list-group">
                     <li className="list-group-item">
-                        <button className="btn btn-success float-end" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                        <button className="btn btn-success float-end" onClick={handleAddModule}>
                             Add</button>
-                        <button className="btn btn-primary float-end" onClick={() => dispatch(updateModule(module))}>
+                        <button className="btn btn-primary float-end" onClick={handleUpdateModule}>
                             Update
                         </button>
                         <input className="form-control" value={module.name}
@@ -53,7 +75,7 @@ function ModuleListEditor() {
                                             Edit
                                         </button>
                                         <button className="btn btn-danger"
-                                            onClick={() => dispatch(deleteModule(module._id))}>
+                                            onClick={() => handleDeleteModule(module._id)}>
                                             Delete
                                         </button>
                                     </div>

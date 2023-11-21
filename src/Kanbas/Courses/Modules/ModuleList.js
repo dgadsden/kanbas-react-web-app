@@ -1,18 +1,37 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import db from "../../Database";
 import { FaCheckCircle } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
-import { FaEllipsisV } from "react-icons/fa";
-import { useSelector, useDispatch } from "react-redux";
-
+import { FaPlus, FaEllipsisV } from "react-icons/fa";
+// import { findModulesForCourse } from "./client";
 import "./index.css"
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+  setModules,
+} from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 
 
 function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
 
+
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+      );
+  }, [courseId]);
+
+  
+  
 
   return (
     <ul className="list-group">

@@ -9,12 +9,26 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import ModuleListEditor from "./Modules/ModulesEditor";
 import { FiMenu } from "react-icons/fi"
 import "./index.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
-function Courses({ courses }) {
+
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const URL = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   const location = useLocation();
   const [OpenNav, setOpen] = useState(true);
 
@@ -32,7 +46,7 @@ function Courses({ courses }) {
             </button>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb" style={{ "--bs-breadcrumb-divider": "'>'" }}>
-                <li className="breadcrumb-item"><a href="#">{course._id}</a></li>
+                <li className="breadcrumb-item"><a href="#">{courseId}</a></li>
                 <li className="breadcrumb-item active" aria-current="page">
                   {location.pathname.split("/").pop()}
                 </li>
@@ -74,3 +88,5 @@ function Courses({ courses }) {
   );
 }
 export default Courses;
+
+

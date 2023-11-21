@@ -50,7 +50,7 @@ function Home() {
                 </div>
                 <div class="row">
                   <button type="#" class="btn btn-light">
-                    Import Fromt Commons
+                    Import From Commons
                   </button>
                 </div>
                 <div class="row">
