@@ -1,4 +1,4 @@
-import db from "../../Kanbas/Database";
+// import db from "../../Kanbas/Database";
 import { useParams, useLocation } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";

@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import DashboardEditor from './Dashboard/DashboardEditor';
 import Courses from "./Courses";
-import db from "./Database";
+// import db from "./Database";
 import { useEffect, useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
@@ -11,8 +11,8 @@ import axios from "axios";
 
 
 function Kanbas() {
-  const [courses, setCourses] = useState(db.courses);
-  const URL = "http://localhost:4000/api/courses";
+  const [courses, setCourses] = useState("");
+  const URL = "https://kanbas-node-server-app-nxoa.onrender.com/api/courses";
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
