@@ -14,6 +14,7 @@ function Nav() {
         Hello</Link>
       <Link className="nav-link" to="/Kanbas">
         Kanbas</Link>
+
     </nav>
   );
 }

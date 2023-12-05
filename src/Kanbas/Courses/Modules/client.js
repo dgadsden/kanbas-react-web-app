@@ -29,3 +29,4 @@ export const findModulesForCourse = async (courseId) => {
         .get(`${COURSES_URL}/${courseId}/modules`);
     return response.data;
 };
+
