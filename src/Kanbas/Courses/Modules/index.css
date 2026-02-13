@@ -1,0 +1,15 @@
+#module-item {
+    padding-bottom: 30px;
+}
+
+.list-group {
+    padding-top: 30px;
+}
+
+.module_icon {
+    margin-right: 10px;
+}
+
+.check {
+    color: green;
+}

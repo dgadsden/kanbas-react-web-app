@@ -1,0 +1,21 @@
+#course-container nav {
+    padding-left: 0px;
+    padding-top: 20px;
+    font-size: 20px;
+   
+}
+
+#course-container nav a {
+    padding-left: 15px;
+    text-decoration: none;
+    color: #c70000;
+}
+
+#header {
+    padding-left: 15px;
+}
+
+#menu-button {
+    font-size: 25px;
+    color: #c70000;
+}

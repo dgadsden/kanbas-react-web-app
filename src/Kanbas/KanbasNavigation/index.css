@@ -1,0 +1,36 @@
+.wd-kanbas-navigation {
+  background: black;
+  border-radius: 0px !important;
+  border: none;
+  width: 80px;
+  font-size: small;
+}
+
+.fs-2 {
+  color: #c70000;
+} 
+
+.wd-kanbas-navigation a {
+  background-color: black;
+  color: white;
+  border-radius: 0px !important;
+  border: none;
+}
+
+.wd-kanbas-navigation #account,#text {
+  color: white;
+
+
+}
+
+.wd-kanbas-navigation a.active {
+  background-color: white;
+  color: #c70000;
+
+}
+.wd-kanbas-navigation .list-group-item {
+  padding: 10px 0px !important;
+  
+
+}
+

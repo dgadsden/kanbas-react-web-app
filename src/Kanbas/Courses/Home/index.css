@@ -1,0 +1,48 @@
+#course-buttons .form-select {
+    width: fit-content;
+    display: inline-block;
+}
+#course-buttons .form-select, .btn{
+    margin: 5px;
+}
+#course-buttons {
+    text-align: right;
+}
+
+#checkmark {
+    color: green;
+}
+
+.list-group-item i {
+    margin: 5px;
+}
+
+#course-status a {
+    color: #c70000;
+    text-decoration: none;
+}
+
+.submenu p {
+    font-weight: 200;
+    font-size: smaller;
+}
+
+#course-status p {
+    font-size: x-large;
+    text-align: left;
+}
+
+#course-status button {
+    margin-bottom: 5px;
+    border-color: gray;
+}
+
+#course-stat-btn1 button {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#course-stat-btn2 button {
+    text-align: left;
+    margin-bottom: 10px;
+}
