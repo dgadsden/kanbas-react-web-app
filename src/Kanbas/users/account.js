@@ -52,6 +52,7 @@ function Account() {
                     <h1>Account</h1>
                     {account && (
                         <div>
+                            
                             <input className="form-control" value={account.password}
                                 onChange={(e) => setAccount({
                                     ...account,
